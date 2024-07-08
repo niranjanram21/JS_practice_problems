@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var ename, eage, basicsal, totalsal, hra, pf;
+
+      ename = prompt("Enter employee name");
+      eage = prompt("Enter age");
+      gender = prompt("Enter gender");
+      dept = prompt("Enter your department");
+      basicsal = prompt("Enter your basic salary");
+      basicsal = parseInt(basicsal);
+
+      hra = basicsal * (13 / 100);
+      pf = basicsal * (25 / 100);
+      totalsal = basicsal + hra + pf;
+
+      if (gender == "male") {
+        if (totalsal >= 100000) {
+          console.log("tax percent is 15%");
+        } else if (totalsal >= 50000) {
+          console.log("tax percent is 10%");
+        } else if (totalsal > 20000) {
+          console.log("tax percent is 5%");
+        } else {
+          console.log("no tax");
+        }
+      }
+
+      if (gender == "female") {
+        if (totalsal >= 100000) {
+          console.log("tax percent is 10%");
+        } else if (totalsal >= 50000) {
+          console.log("tax percent is 7.5%");
+        } else if (totalsal > 20000) {
+          console.log("tax percent is 5%");
+        } else {
+          console.log("no tax");
+        }
+      }
+
+      // console.log("employee name: " + ename);
+      // console.log("employee age: " + eage);
+      // console.log("Department: " + dept);
+      // console.log("basic salary: " + basicsal);
+      // console.log("hra: " + hra);
+      // console.log("pf: " + pf);
+    </script>
+  </body>
+</html>

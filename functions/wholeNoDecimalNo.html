@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var checkNumberType = (num) => {
+        var num;
+        if (Number.isNaN(num)) {
+          console.log("Enter a valid number");
+        } else if (Number.isInteger(num) && num >= 0) {
+          console.log("It is a whole number");
+        } else if (Number.isInteger(num) && num <= 0) {
+          console.log("It is a negative number");
+        } else {
+          console.log("It is a decimal number");
+        }
+      };
+      var number = parseFloat(prompt("Enter a number:"));
+      checkNumberType(number);
+    </script>
+  </body>
+</html>

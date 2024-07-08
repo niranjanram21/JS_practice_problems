@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var employeeDetails = () => {
+        var empname, age, dept, basicSal, salary, tax;
+
+        empname = prompt("Enter name");
+        age = prompt("Enter age");
+        gender = prompt("Enter your gender");
+        dept = prompt("Enter department");
+        basicSal = prompt("enter basic salary");
+        basicSal = parseInt(basicSal);
+        salary = totalSalary(basicSal);
+        tax = totalTax(totalSalary, gender);
+        displayData(empname, age, dept, basicSal, salary, tax);
+      };
+      var totalSalary = (basicSal) => {
+        var hra, pf;
+        hra = 0.24 * basicSal;
+        pf = 0.14 * basicSal;
+        totalSalary = basicSal + hra + pf;
+        return totalSalary;
+      };
+      var totalTax = (totalSalary, gender) => {
+        if (gender == "male") {
+          if (totalSalary > 100000) {
+            tax = 0.15 * totalSalary;
+          } else if (totalSalary > 50000) {
+            tax = 0.1 * totalSalary;
+          } else if (totalSalary > 30000) {
+            tax = 0.05 * totalSalary;
+          } else {
+            tax = 0;
+          }
+        } else {
+          if (totalSalary > 100000) {
+            tax = 0.1 * totalSalary;
+          } else if (totalSalary > 50000) {
+            tax = 0.05 * totalSalary;
+          } else {
+            tax = 0;
+          }
+        }
+        return tax;
+      };
+      var displayData = (empname, age, dept, basicSal, salary, tax) => {
+        console.log("name of employee: " + empname);
+        console.log("AGe of employee: " + age);
+        console.log("Department of employee: " + dept);
+        console.log("Basic Salary of employee: " + basicSal);
+        console.log("Total Salary of employee: " + totalSalary);
+        console.log("Total tax is: " + tax);
+      };
+      employeeDetails();
+    </script>
+  </body>
+</html>

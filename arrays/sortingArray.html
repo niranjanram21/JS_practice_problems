@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //ascending order
+      var a = [24, 65, 2, 4, 75, 765, 45, 67, 45, 33, 56];
+      var temp;
+      for (i = 0; i < a.length; i++) {
+        for (j = i + 1; j < a.length; j++) {
+          if (a[i] > a[j]) {
+            temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+          }
+        }
+      }
+      console.log("Ascending Order: " + a);
+
+      //descending order
+      var a = [24, 65, 2, 4, 75, 765, 45, 67, 45, 33, 56];
+      var temp;
+      for (i = 0; i < a.length; i++) {
+        for (j = i + 1; j < a.length; j++) {
+          if (a[i] < a[j]) {
+            temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+          }
+        }
+      }
+      console.log("Descending Order: " + a);
+
+      //   var a = 10;
+      //   var b = 20;
+
+      //   var temp = a;
+      //   a = b;
+      //   b = temp;
+
+      //   // a = a + b;
+      //   // b = a - b;
+      //   // a = a - b;
+
+      //   console.log(a);
+      //   console.log(b);
+      //
+    </script>
+  </body>
+</html>

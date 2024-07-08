@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var n = parseInt(prompt("enter a number"));
+      var num = n;
+      var revofNo = 0;
+      var rem;
+      while (n > 0) {
+        rem = n % 10;
+        revofNo = revofNo * 10 + rem;
+        n = parseInt(n / 10);
+      }
+      //console.log(revofNo);
+      if (num == revofNo) {
+        console.log("its palinrome");
+      } else {
+        console.log("its not palindrome");
+      }
+    </script>
+  </body>
+</html>

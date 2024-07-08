@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //prime numbers
+      // var num = parseInt(prompt("Enter a number"));
+      // var flag = 0;
+
+      // for (var i = 2; i < num; i++) {
+      //   if (num % i == 0) {
+      //     flag = 1;
+      //     break;
+      //   }
+      // }
+      // if (flag == 0) {
+      //   console.log("Its a prime number");
+      // } else {
+      //   console.log("It is not a prime number");
+      // }
+
+      // prime numbers in a given interval
+      var num1 = parseInt(prompt("Enter 1st number"));
+      var num2 = parseInt(prompt("Enter 2nd number"));
+      var flag = 0;
+      for (var i = num1; i <= num2; i++) {
+        for (var j = num1; j <= i; j++) {
+          if (i % j == 0) {
+            flag == 1;
+          }
+        }
+        if (flag == 1) {
+          console.log(i);
+        }
+      }
+      // var n = 5;
+
+      // for (var i = 1; i <= 20; i++) {
+      //   console.log(n + " * " + i + " = " + n * i);
+      // }
+    </script>
+  </body>
+</html>
