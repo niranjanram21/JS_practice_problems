@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isPrime(n) {
+        for (let i = 2; i < Math.sqrt(n); i++) {
+          if (n < 2) {
+            return false;
+          }
+          if (n % i == 0) {
+            return false;
+          } else {
+            return true;
+          }
+        }
+      }
+      console.log(isPrime(7));
+      console.log(isPrime(10));
+      console.log(isPrime(19));
+      console.log(isPrime(1));
+    </script>
+  </body>
+</html>
